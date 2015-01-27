@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/lib/bootstrap.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/lib/jquery-1.9.1.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/angular.js"></script>
+
+    <script src="/js/app.js"></script>
+  </head>
+  <body ng-app="ions">
+    <div id="w">
+      <div id="header" class="container">
+        <div id="logo"></div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1>Ionic Frosted Glass</h1>
+<p>An optional frosted-glass effect for iOS 7 styled Ionic apps.</p>
+<p><a href="http://ionicframework.com/demos/frosted-glass/">Demo here</a></p>
+<p>To use, include <code>ionic.contrib.frostedGlass.css</code> and <code>ionic.contrib.frostedGlass.js</code> in your app.</p>
+<p>Then, apply the <code>frosted-bar</code> attribute directive to a <code>&lt;header-bar&gt;</code> or <code>&lt;nav-bar&gt;</code> to get the frosted effect. Note: you must also
+have a <code>&lt;content&gt;</code> directive on the page which is where the content will be taken from for the blur. Also, feel free to use
+the extra class <code>bar-frosted</code> for header bars that comes with the CSS, which gives you a light grey header bar much like
+iMessage:</p>
+<p>```html
+<body>
+  <pane ng-controller="PageCtrl">
+    <header-bar frosted-bar title="'Title'" type="bar-frosted"></header-bar></p>
+<pre><code>&lt;content has-header="true" has-footer="true" padding="true"&gt;
+  &lt;ol class="messages"&gt;
+    &lt;li ng-repeat="message in messages" ng-bind-html="message.content"&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/content&gt;
+</code></pre>
+<p></pane>
+</body>
+```</p>
+<p>Unfortunately, it's not feasible to auto blur the content if it changes. To notify the frosted glass system to redraw itself, you can use the <code>$ionicFrostedDelegate</code> service:</p>
+<p>```javascript
+controller('MyCtrl', function($scope, $ionicFrostedDelegate, $ionicScrollDelegate) {
+  $scope.addNew = function() {
+    // Add new data</p>
+<pre><code>// Resize the scroll area
+$ionicScrollDelegate.resize();
+
+// Update the frosted glass system
+$ionicFrostedDelegate.update();
+
+// If you wish, scroll to the bottom of the scroll box to show the new content
+$timeout(function() {
+  $ionicScrollDelegate.scrollBottom(true);
+}, 1);
+</code></pre>
+<p>}
+});
+```</p>
+          </div>
+          <div class="col-sm-4">
+
+            <h2>Created by Max Lynch</h2>
+            <code>ionic add ionic-contrib-frosted-glass</code>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

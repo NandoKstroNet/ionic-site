@@ -1,0 +1,89 @@
+body {
+  background-color: #1b2435;
+  color: #c1d9ff;
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5 {
+  color: #c1d9ff;
+  font-weight: 100;
+}
+
+strong {
+  font-weight: 200;
+  letter-spacing: 3px;
+  color: #f2f6ff;
+}
+
+#header {
+  padding: 30px 0;
+}
+
+#logo {
+  background: url('/img/ions-logo.png') no-repeat transparent;
+  background-size: 100%;
+  width: 76px;
+  height: 30px;
+}
+#cta {
+  color: #e5eeff;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 4px;
+  font-size: 48px;
+  margin: 50px 0 20px 0;
+  font-family:     "AvenirNextLTPro-UltLt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#cta-small {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #727e93;
+  font-size: 18px;
+  font-family:     "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 80px;
+  /*
+  font-family: "AvenirNextLTPro-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  */
+}
+
+feature {
+  display: block;
+}
+feature img {
+  max-width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+feature .info {
+  color: #111;
+  background-color: white;
+  padding: 15px 15px;
+  height: 80px;
+}
+feature .info .title {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#home h2 {
+  text-align: center;
+}
+
+hr {
+  margin: 80px 0;
+  border-top: 1px solid #374866;
+}
+
+code {
+  background-color: transparent;
+  padding: 0;
+}
+pre {
+  border: none;
+  background: none;
+}
+pre code {
+  border: none;
+  background: none;
+  color: #fff;
+}
